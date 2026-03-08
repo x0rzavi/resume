@@ -6,7 +6,7 @@
 #let website = "x0rzavi.github.io/portfolio"
 #let github = "github.com/x0rzavi"
 #let linkedin = "linkedin.com/in/sen-avishek"
-#let info-pos = left
+#let info-pos = center
 #let image-path = "image.jpg"
 #let font = "New Computer Modern"
 #let font-size = 10pt
