@@ -31,11 +31,12 @@
   )
 
   show heading.where(level: 1): set text(
-    size: font-size * 2.2,
-    weight: "bold",
+    size: font-size * 2.5,
+    weight: "medium",
   )
   show heading.where(level: 1): set align(info-pos)
 
+  show heading.where(level: 2): set text(weight: "medium")
   show heading.where(level: 2): it => block(below: 0.6em, above: 1.8em)[
     #stack(spacing: 0.3em, smallcaps(it.body), line(
       length: 100%,
