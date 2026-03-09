@@ -7,6 +7,7 @@
   linkedin: "",
   info-pos: left,
   image-path: "",
+  image-width: 0mm,
   font: "New Computer Modern",
   font-size: 10pt,
   accent: rgb("#023e7d"),
@@ -38,7 +39,7 @@
   show heading.where(level: 2): it => block(below: 0.6em, above: 1.8em)[
     #stack(spacing: 0.3em, smallcaps(it.body), line(
       length: 100%,
-      stroke: 0.5pt,
+      stroke: 0.6pt,
     ))
   ]
 
@@ -68,7 +69,7 @@
 
     layout(size => context {
       let full-line = filtered.join(" | ")
-      if measure(full-line).width <= size.width {
+      if measure(full-line).width + (30mm * 2) <= size.width {
         full-line
       } else {
         let mid = calc.ceil(filtered.len() / 2)

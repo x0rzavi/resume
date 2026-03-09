@@ -2,7 +2,7 @@
 
 Avi's easily configurable resume make with [typst](https://typst.app)
 
-# TODO
+# Todos
 
 - [ ] Make more ATS friendly
   - [x] Remove usage of grids

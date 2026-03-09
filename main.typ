@@ -6,7 +6,7 @@
 #let website = "x0rzavi.github.io/portfolio"
 #let github = "github.com/x0rzavi"
 #let linkedin = "linkedin.com/in/sen-avishek"
-#let info-pos = center
+#let info-pos = left
 #let image-path = "image.jpg"
 #let font = "New Computer Modern"
 #let font-size = 10pt
@@ -81,6 +81,29 @@
     "Developed a responsive portfolio site with vanilla HTML5, CSS3, JS, showcasing core web fundamentals",
     "Applied advanced CSS, including mask-image, to dynamically color 15+ SVG icons",
     "Improved user experience with interactive elements using the Intersection Observer API",
+  ),
+)
+// #project(
+//   name: "ArchISO ZFS",
+//   techstack: "Shell, Docker, CI/CD, Linux, Git",
+//   timeline: format-date("Sep 2023", "Oct 2023"),
+//   url: "https://github.com/x0rzavi/archiso-zfs",
+//   description: (
+//     "Created a customized Arch Linux Live/Rescue CD with ZFS support",
+//     "Improved modularity with a patch-files based update approach",
+//     "Implemented GitHub actions to automate the CI/CD process",
+//   ),
+// )
+#project(
+  name: "Event Management Platform",
+  techstack: "Django, Python, SQLite, WebDev",
+  timeline: format-date("Apr 2024", "May 2024"),
+  url: "https://github.com/nsec-vat-django/event-management-platform",
+  description: (
+    "Developed a one-stop event management platform utilizing the Django framework for server-side logic",
+    "Applied Django's ORM system to interact with the SQLite database",
+    "Implemented Create, Read, Update, and Delete operations for event management",
+    "Integrated Bootstrap and jQuery for responsive design and user interactivity",
   ),
 )
 
