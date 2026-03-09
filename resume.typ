@@ -82,17 +82,19 @@
   }
 
   if info-pos == left {
-    grid(
-      columns: (1fr, 85pt),
-      row-gutter: 1.5em,
-      column-gutter: 2em,
-      pad(top: 1.5em, [= #name]),
-      grid.cell(rowspan: 2, image(image-path, width: 100%)),
-      info,
+    pad(top: 1.5em)[= #name]
+    pad(top: 0.6em, bottom: 3em)[
+      #align(info-pos)[#info]
+    ]
+    place(
+      top + right,
+      image(image-path, width: 30mm),
     )
   } else if info-pos == center {
     [= #name]
-    align(center)[#info]
+    pad(top: 0.6em)[
+      #align(info-pos)[#info]
+    ]
   }
 
   set par(justify: true)
@@ -106,23 +108,19 @@
   bottom-left: "",
   bottom-right: "",
 ) = {
-  grid(
-    columns: (1fr, auto),
-    gutter: 0.5em,
-    align: (left, right),
-    top-left, top-right,
-    bottom-left, bottom-right,
-  )
+  [
+    #top-left #h(1fr) #top-right \
+    #bottom-left #h(1fr) #bottom-right
+  ]
 }
 
 #let grid-1x2(
   left: "",
   right: "",
 ) = {
-  grid(
-    columns: (1fr, auto),
-    left, right,
-  )
+  [
+    #left #h(1fr) #right
+  ]
 }
 
 #let education(
@@ -149,8 +147,6 @@
   url: "",
   description: (),
 ) = {
-  show grid: set block(below: 0.8em)
-
   block(inset: (left: 0.5em, right: 0.5em))[
     #grid-1x2(
       left: link(url)[#strong(name)] + " | " + emph(techstack),
@@ -165,8 +161,6 @@
   url: "",
   description: (),
 ) = {
-  show grid: set block(below: 0.8em)
-
   block(inset: (left: 0.5em, right: 0.5em))[
     #grid-1x2(
       left: link(url)[#strong(name)],

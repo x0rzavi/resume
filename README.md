@@ -5,7 +5,7 @@ Avi's easily configurable resume make with [typst](https://typst.app)
 # TODO
 
 - [ ] Make more ATS friendly
-  - [ ] Remove usage of grids
+  - [x] Remove usage of grids
   - [ ] Remove image
 - [ ] Make configuration more easy
 - [ ] Adjust for easy swapping for different companies
