@@ -143,14 +143,14 @@
 
 #let project(
   name: "",
-  techstack: "",
+  techstack: (),
   timeline: "",
   url: "",
   description: (),
 ) = {
   block(inset: (left: 0.5em, right: 0.5em))[
     #grid-1x2(
-      left: link(url)[#strong(name)] + " | " + emph(techstack),
+      left: link(url)[#strong(name)] + " | " + emph(techstack.join(", ")),
       right: timeline,
     )
     #list(..description)]

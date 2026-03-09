@@ -49,7 +49,7 @@
 == Projects
 #project(
   name: "Celeris",
-  techstack: "C++, CMake, ZeroMQ, FlatBuffers, GoogleTest",
+  techstack: ("C++", "CMake", "ZeroMQ", "FlatBuffers", "GoogleTest"),
   timeline: format-date("Jul 2025", "Present"),
   url: "https://github.com/x0rzavi/celeris",
   description: (
@@ -61,7 +61,7 @@
 )
 #project(
   name: "GitHub ReadMe Terminal",
-  techstack: "Python, GitHub GraphQL API, FFmpeg",
+  techstack: ("Python", "GitHub GraphQL API", "FFmpeg"),
   timeline: format-date("Nov 2023", "Present"),
   url: "https://github.com/x0rzavi/github-readme-terminal",
   description: (
@@ -74,7 +74,7 @@
 )
 #project(
   name: "Portfolio",
-  techstack: "Responsive Design, HTML5, CSS, JavaScript",
+  techstack: ("Responsive Design", "HTML5", "CSS", "JavaScript"),
   timeline: format-date("Aug 2025", "Present"),
   url: "https://github.com/x0rzavi/portfolio",
   description: (
@@ -85,7 +85,7 @@
 )
 // #project(
 //   name: "ArchISO ZFS",
-//   techstack: "Shell, Docker, CI/CD, Linux, Git",
+//   techstack: ("Shell", "Docker", "CI/CD", "Linux", "Git"),
 //   timeline: format-date("Sep 2023", "Oct 2023"),
 //   url: "https://github.com/x0rzavi/archiso-zfs",
 //   description: (
@@ -96,7 +96,7 @@
 // )
 #project(
   name: "Event Management Platform",
-  techstack: "Django, Python, SQLite, WebDev",
+  techstack: ("Django", "Python", "SQLite", "WebDev"),
   timeline: format-date("Apr 2024", "May 2024"),
   url: "https://github.com/nsec-vat-django/event-management-platform",
   description: (
