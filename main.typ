@@ -8,17 +8,18 @@
 #let linkedin = "linkedin.com/in/sen-avishek"
 #let info-pos = left
 #let image-path = "image.jpg"
-#let font = "New Computer Modern"
+#let font = "TeX Gyre Schola"
 #let font-size = 10pt
 #let accent = rgb("#023e7d")
 
 #show: resume.with(
+  /* comment out to exclude */
   name: name,
   phone: phone,
   email: email,
   website: website,
   github: github,
-  linkedin: linkedin,
+  // linkedin: linkedin,
   info-pos: info-pos,
   image-path: image-path,
   font: font,

@@ -31,17 +31,24 @@
   )
 
   show heading.where(level: 1): set text(
-    size: font-size * 2.5,
+    size: font-size * 2.2,
     weight: "medium",
   )
   show heading.where(level: 1): set align(info-pos)
 
-  show heading.where(level: 2): set text(weight: "medium")
-  show heading.where(level: 2): it => block(below: 0.6em, above: 1.8em)[
-    #stack(spacing: 0.3em, smallcaps(it.body), line(
-      length: 100%,
-      stroke: 0.6pt,
-    ))
+  show heading.where(level: 2): set text(
+    size: font-size * 1.4,
+    weight: "medium",
+  )
+  show heading.where(level: 2): it => block(below: 0.6em, above: 1.2em)[
+    #stack(
+      spacing: 0.3em,
+      smallcaps(it),
+      line(
+        length: 100%,
+        stroke: 0.6pt,
+      ),
+    )
   ]
 
   show link: set text(
@@ -68,9 +75,10 @@
       item(linkedin, prefix: "https://"),
     ).filter(x => x != none)
 
+    let offset = if info-pos == left { 30mm * 2 } else { 0mm }
     layout(size => context {
       let full-line = filtered.join(" | ")
-      if measure(full-line).width + (30mm * 2) <= size.width {
+      if measure(full-line).width + offset <= size.width {
         full-line
       } else {
         let mid = calc.ceil(filtered.len() / 2)
@@ -84,17 +92,21 @@
   }
 
   if info-pos == left {
-    pad(top: 1.5em)[= #name]
-    pad(top: 0.6em, bottom: 3em)[
+    if image-path != "" {
+      pad(top: 2.5em)[= #name]
+      place(
+        top + right,
+        image(image-path, width: 30mm),
+      )
+    } else {
+      [= #name]
+    }
+    pad(top: 0.6em, bottom: 1.5em)[
       #align(info-pos)[#info]
     ]
-    place(
-      top + right,
-      image(image-path, width: 30mm),
-    )
   } else if info-pos == center {
     [= #name]
-    pad(top: 0.6em)[
+    pad(top: 0.2em)[
       #align(info-pos)[#info]
     ]
   }
